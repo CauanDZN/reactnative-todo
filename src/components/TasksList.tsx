@@ -7,11 +7,11 @@ import {
   Text,
   StyleSheet,
 } from "react-native";
-import Icon from "react-native-vector-icons/Feather";
 
 import { ItemWrapper } from "./ItemWrapper";
 
 import trashIcon from "../assets/icons/trash/trash.png";
+import checkIcon from "../assets/icons/check/check.png";
 
 export interface Task {
   id: number;
@@ -50,7 +50,7 @@ export function TasksList({
                   testID={`marker-${index}`}
                   style={item.done ? styles.taskMarkerDone : styles.taskMarker}
                 >
-                  {item.done && <Icon name="check" size={12} color="#FFF" />}
+                  {item.done && <Image source={checkIcon} />}
                 </View>
 
                 <Text style={item.done ? styles.taskTextDone : styles.taskText}>

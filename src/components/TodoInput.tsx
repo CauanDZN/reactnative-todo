@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
-import Icon from "react-native-vector-icons/Feather";
+import { StyleSheet, TextInput, TouchableOpacity, View, Image } from "react-native";
+
+import plus from "../assets/icons/plus/plus.png";
 
 interface TodoInputProps {
   addTask: (task: string) => void;
@@ -37,7 +38,7 @@ export function TodoInput({ addTask }: TodoInputProps) {
         style={styles.addButton}
         onPress={handleAddNewTask}
       >
-        <Icon name="chevron-right" size={24} color="#B2B2B2" />
+        <Image source={plus} />
       </TouchableOpacity>
     </View>
   );
